@@ -1,6 +1,4 @@
-using BlazorRouteParameterSSR.Pages;
-using BlazorRouteParameterSSR.Shared;
-using Microsoft.AspNetCore.Components.Endpoints;
+using BlazorRouteParameterSSR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,8 +21,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseRouting();
 
-app.MapRazorComponents<MainLayout>();
+app.MapRazorComponents<App>();
 
 // This way, the route parameter is working, without @page directive
 //app.Map("route-parameter/{text}", (string text) => new RazorComponentResult<RouteParameter>(new { Text = text }));

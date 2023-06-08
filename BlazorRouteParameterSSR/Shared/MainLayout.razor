@@ -1,28 +1,15 @@
-﻿@using Microsoft.AspNetCore.Components.Web
-@inherits LayoutComponentBase
-@implements IRazorComponentApplication<MainLayout>
+﻿@inherits LayoutComponentBase
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <HeadOutlet></HeadOutlet>
-</head>
-<body>
-    <PageTitle>BlazorRouteParameterSSR</PageTitle>
-
-    <div class="page">
-        <main>
-            <article class="content px-4">
-                 @Body
-            </article>
-        </main>
+<div class="page">
+@*     <div class="sidebar">
+        <NavMenu />
     </div>
-
-    <script src="_framework/blazor.web.js" suppress-error="BL9992"></script>
-</body>
-</html>
+ *@    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
